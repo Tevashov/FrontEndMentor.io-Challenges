@@ -1,0 +1,140 @@
+/* :: Common rules */
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+* { box-sizing: border-box; }
+body { margin: 0; height: 100vh; min-height: 100%; }
+
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --lightGrey: hsl(217, 12%, 63%);
+    --mediumGrey: hsl(216, 12%, 54%);
+    --darkBlue: hsl(213, 19%, 18%);
+    --veryDarkBlue: hsl(216, 12%, 8%);
+}
+
+.is-hidden { display: none; }
+
+/* :: Component classes */
+
+.cRate-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--veryDarkBlue);
+}
+.cRate-wrapper * { font-family: 'Overpass', sans-serif; }
+
+.cRate-box {
+    width: 85%;
+    max-width: 415px;
+    padding: 30px;
+    background: radial-gradient(at 50% 0%, #232a34, #171e28);
+    border-radius: 25px;
+    color: var(--white);
+    font-size: 15px;
+}
+
+.cRate-star {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/icon-star.svg') center no-repeat var(--darkBlue);
+}
+
+.cRate-box h1 {
+    padding: 0;
+    margin: 30px 0 0 0;
+    font-size: 28px;
+}
+
+.cRate-box fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cRate-box legend,
+.cRate-box p {
+    width: 100%;
+    margin: 0;
+    color: var(--lightGrey);
+    line-height: 1.5;
+}
+.cRate-box legend { padding: 15px 0 30px 0; }
+.cRate-box p { padding: 15px 0 15px 0; }
+
+.cRate-box input[type="radio"] {
+    background: var(--darkBlue);
+    color: var(--lightGrey);
+    appearance: none;
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cRate-box input[type="radio"]:hover { color: var(--white); background: var(--orange); }
+.cRate-box input[type="radio"]:checked,
+.cRate-box input[type="radio"]:focus { color: var(--white); background: var(--lightGrey); cursor: default; }
+
+.cRate-box input[type="radio"]::after {
+    display: block;
+    color: inherit;
+    height: 16px;
+}
+.cRate-box input[type="radio"]#rate1::after { content: "1"; }
+.cRate-box input[type="radio"]#rate2::after { content: "2"; }
+.cRate-box input[type="radio"]#rate3::after { content: "3"; }
+.cRate-box input[type="radio"]#rate4::after { content: "4"; }
+.cRate-box input[type="radio"]#rate5::after { content: "5"; }
+
+.cRate-box label { display: none; }
+
+.cRate-submit {
+    flex: 1 1 100%;
+    height: 45px;
+    padding: 15px 0;
+    margin: 30px 0 0 0;
+    background: var(--orange);
+    color: var(--white);
+    border: none;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: .2rem;
+    cursor: pointer;
+}
+.cRate-submit:hover {
+    background: var(--white);
+    color: var(--orange);
+}
+
+.cRate-thanks { text-align: center; }
+
+.cRate-img { margin: 15px 0 30px 0; }
+
+.cRate-msg {
+    background: var(--darkBlue);
+    border-radius: 25px;
+    height: 35px;
+    color: var(--orange);
+    padding: 10px 20px;
+    margin: 0 auto;
+    width: fit-content;
+}

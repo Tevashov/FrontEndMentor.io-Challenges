@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Challenge by https://www.frontendmentor.io?ref=challenge. Coded by Teff -->
+    <meta charset="UTF-8">
+    <title>Frontend Mentor | QR code component</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <style>
+
+        /* :: Common rules */
+
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+        :root {
+            --white: hsl(0, 0%, 100%);
+            --lightGray: hsl(212, 45%, 89%);
+            --grayishBlue: hsl(220, 15%, 55%);
+            --darkBlue: hsl(218, 44%, 22%);
+        }
+
+        * { box-sizing: border-box; }
+        body { margin: 0; height: 100vh; min-height: 100%; }
+
+        /* :: Component classes */
+
+        .qr-wrapper {
+            background-color: var(--lightGray);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .qr-box {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--white);
+            display: flex;
+            flex-direction: column;
+            max-width: 320px;
+            width: 100%;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .qr-box > * {
+            display: block;
+        }
+
+        .qr-box_code {
+            max-width: 280px;
+            border-radius: 12px;
+        }
+
+        .qr-box_header {
+            color: var(--darkBlue);
+            font-size: 20px;
+            text-align: center;
+            margin: 30px 10px 20px 10px;
+        }
+
+        .qr-box_annt {
+            color: var(--grayishBlue);
+            font-size: 15px;
+            text-align: center;
+            margin: 0 10px 10px 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="qr-wrapper">
+        <section class="qr-box">
+            <img class="qr-box_code" src="./images/image-qr-code.png" alt="QR code">
+            <h1 class="qr-box_header">Improve your front-end skills by building projects</h1>
+            <p class="qr-box_annt">Scan the QR code to visit Frontend Mentor and take your coding skills to the next
+                level</p>
+        </section>
+    </main>
+
+</body>
+</html>
