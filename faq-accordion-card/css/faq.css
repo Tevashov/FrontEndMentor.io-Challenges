@@ -1,4 +1,5 @@
-/* :: Common rules */
+
+/* --- Common rules --- */
 
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
@@ -19,7 +20,7 @@ body { margin: 0; min-height: 100%; height: 100vh; font-family: 'Kumbh Sans', sa
     --ltGrayishBlue: hsl(240, 5%, 91%);
 }
 
-/* :: Component classes */
+/* --- Component classes --- */
 
 .faq-wrapper {
     height: 100%;
@@ -27,7 +28,6 @@ body { margin: 0; min-height: 100%; height: 100vh; font-family: 'Kumbh Sans', sa
     justify-content: center;
     align-items: center;
     background: linear-gradient( var(--softViolet), var(--softBlue) );
-
 }
 
 .faq-box {
@@ -40,10 +40,10 @@ body { margin: 0; min-height: 100%; height: 100vh; font-family: 'Kumbh Sans', sa
     box-shadow: 0 30px 30px rgba(0, 0, 0, .2);
 }
 
-/* :: Illustration */
+/* --- Illustration --- */
 
 .faq-illustration {
-    /*  */
+    /* : Desktop */
     border-radius: 25px 0 0 25px;
     position: relative;
     background:
@@ -61,20 +61,20 @@ body { margin: 0; min-height: 100%; height: 100vh; font-family: 'Kumbh Sans', sa
 }
 
 .faq-illustration_out-desk {
-    /*  */
+    /* : Desktop */
     position: absolute;
     left: -93px;
     top: 200px;
 }
 .faq-illustration_out-mobile { display: none; }
 
-/* :: FAQ list */
+/* --- FAQ list --- */
 
 .faq-list {
     background: #fff;
     padding: 70px 90px 80px 0;
     border-radius: 0 25px 25px 0;
-    /*  */
+    /* : Desktop */
     flex: 1 0 50%;
 }
 
@@ -87,16 +87,17 @@ body { margin: 0; min-height: 100%; height: 100vh; font-family: 'Kumbh Sans', sa
 .faq-qa {
     border-bottom: 1px solid var(--ltGrayishBlue);
     padding: 15px 0;
-    /* answer animation */
-    max-height: 100px;
-    transition: all 0.1s ease;
+    /* : answer animation */
+    max-height: 70px;
+    height: auto;
+    transition: all 1s ease;
 }
 
 .faq-q {
     font-size: 14px;
     color: var(--veryDkGrayishBlue);
     cursor: pointer;
-    /*  */
+    /* : Desktop */
     position: relative;
     padding-right: 25px;
 }
@@ -107,12 +108,12 @@ body { margin: 0; min-height: 100%; height: 100vh; font-family: 'Kumbh Sans', sa
     position: absolute;
     right: 0;
     top:0;
-    /* arrow animation */
+    /* : arrow animation */
     transition-duration: .2s;
 }
 
 .faq-qa[open] {
-    /* answer animation */
+    /* : answer animation */
     max-height: 99rem;
     transition: all 1s ease;
 }
@@ -120,7 +121,7 @@ body { margin: 0; min-height: 100%; height: 100vh; font-family: 'Kumbh Sans', sa
 .faq-q::marker { content: none; }
 .faq-qa[open] .faq-q { font-weight: bold; }
 .faq-qa[open] .faq-q::after {
-    /* arrow animation */
+    /* : arrow animation */
     transform: rotate( 180deg );
     transition-duration: .2s;
 }
@@ -131,6 +132,7 @@ body { margin: 0; min-height: 100%; height: 100vh; font-family: 'Kumbh Sans', sa
     color: var(--dkGrayishBlue);
 }
 
+/* --- Mobile version ---*/
 
 @media (max-width: 700px) {
 
@@ -142,7 +144,6 @@ body { margin: 0; min-height: 100%; height: 100vh; font-family: 'Kumbh Sans', sa
         border-radius: 25px 25px 0 0;
         background: url('../images/bg-pattern-mobile.svg') #fff;
         background-repeat: no-repeat;
-        /* background-size: 100%; */
         background-position: center top ;
     }
 
@@ -154,7 +155,6 @@ body { margin: 0; min-height: 100%; height: 100vh; font-family: 'Kumbh Sans', sa
         padding: 10px 30px 60px 30px
     }
 
-    .faq-illustration_out-desk { display: none; }
     .faq-illustration_out-mobile {
         display: block;
         position: absolute;
@@ -162,5 +162,6 @@ body { margin: 0; min-height: 100%; height: 100vh; font-family: 'Kumbh Sans', sa
         left: calc(50% - 120px);
         width: 240px;
     }
+    .faq-illustration_out-desk { display: none; }
 
 }
