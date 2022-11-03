@@ -36,6 +36,8 @@ body { margin: 0; min-height: 100%; height: 100vh; font-family: 'Kumbh Sans', sa
     display: flex;
     justify-content: center;
     align-items: stretch;
+    border-radius: 25px;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, .2);
 }
 
 /* :: Illustration */
@@ -58,12 +60,13 @@ body { margin: 0; min-height: 100%; height: 100vh; font-family: 'Kumbh Sans', sa
     flex: 1 0 50%;
 }
 
-.faq-illustration_out {
+.faq-illustration_out-desk {
     /*  */
     position: absolute;
     left: -93px;
     top: 200px;
 }
+.faq-illustration_out-mobile { display: none; }
 
 /* :: FAQ list */
 
@@ -103,6 +106,7 @@ body { margin: 0; min-height: 100%; height: 100vh; font-family: 'Kumbh Sans', sa
     content: url('../images/icon-arrow-down.svg');
     position: absolute;
     right: 0;
+    top:0;
     /* arrow animation */
     transition-duration: .2s;
 }
@@ -128,14 +132,18 @@ body { margin: 0; min-height: 100%; height: 100vh; font-family: 'Kumbh Sans', sa
 }
 
 
-@media (max-width: 845px) {
+@media (max-width: 800px) {
 
     .faq-box { flex-wrap: wrap; }
 
     .faq-illustration {
         flex-basis: 100%;
-        height: 200px;
+        height: 120px;
         border-radius: 25px 25px 0 0;
+        background: url('../images/bg-pattern-mobile.svg') #fff;
+        background-repeat: no-repeat;
+        /* background-size: 100%; */
+        background-position: center top ;
     }
 
     .faq-header { text-align: center; }
@@ -143,9 +151,16 @@ body { margin: 0; min-height: 100%; height: 100vh; font-family: 'Kumbh Sans', sa
     .faq-list {
         flex-basis: 100%;
         border-radius: 0 0 25px 25px;
-        padding: 10px 30px 40px 30px
-
+        padding: 10px 30px 60px 30px
     }
 
-    .faq-illustration_out { display: none; }
+    .faq-illustration_out-desk { display: none; }
+    .faq-illustration_out-mobile {
+        display: block;
+        position: absolute;
+        top: -115px;
+        left: calc(50% - 120px);
+        width: 240px;
+    }
+
 }
