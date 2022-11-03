@@ -41,6 +41,9 @@ body { margin: 0; min-height: 100%; height: 100vh; font-family: 'Kumbh Sans', sa
 /* :: Illustration */
 
 .faq-illustration {
+    /*  */
+    border-radius: 25px 0 0 25px;
+    position: relative;
     background:
         url('../images/illustration-woman-online-desktop.svg'),
         url('../images/bg-pattern-desktop.svg'),
@@ -52,13 +55,11 @@ body { margin: 0; min-height: 100%; height: 100vh; font-family: 'Kumbh Sans', sa
     background-position:
         left -75px top 50px,
         left -430px top -220px;
-
     flex: 1 0 50%;
-    border-radius: 25px 0 0 25px;
-    position: relative;
 }
 
 .faq-illustration_out {
+    /*  */
     position: absolute;
     left: -93px;
     top: 180px;
@@ -69,8 +70,9 @@ body { margin: 0; min-height: 100%; height: 100vh; font-family: 'Kumbh Sans', sa
 .faq-list {
     background: #fff;
     padding: 70px 90px 80px 0;
-    flex: 1 0 50%;
     border-radius: 0 25px 25px 0;
+    /*  */
+    flex: 1 0 50%;
 }
 
 .faq-header {
@@ -82,13 +84,41 @@ body { margin: 0; min-height: 100%; height: 100vh; font-family: 'Kumbh Sans', sa
 .faq-qa {
     border-bottom: 1px solid var(--ltGrayishBlue);
     padding: 15px 0;
+    /* answer animation */
+    max-height: 50px;
+    transition: all 0.1s ease;
 }
-
-.faq-qa[open] .faq-q { font-weight: bold; }
 
 .faq-q {
     font-size: 14px;
     color: var(--veryDkGrayishBlue);
+    cursor: pointer;
+    /*  */
+    position: relative;
+    padding-right: 15px;
+}
+.faq-q:hover { color: var(--softRed); }
+
+.faq-q::after {
+    content: url('../images/icon-arrow-down.svg');
+    position: absolute;
+    right: 0;
+    /* arrow animation */
+    transition-duration: .2s;
+}
+
+.faq-qa[open] {
+    /* answer animation */
+    max-height: 99rem;
+    transition: all 1s ease;
+}
+
+.faq-q::marker { content: none; }
+.faq-qa[open] .faq-q { font-weight: bold; }
+.faq-qa[open] .faq-q::after {
+    /* arrow animation */
+    transform: rotate( 180deg );
+    transition-duration: .2s;
 }
 
 .faq-a {
