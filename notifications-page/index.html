@@ -1,51 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Challenge by https://www.frontendmentor.io?ref=challenge. Coded by Teff -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Notifications page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="imntf__elm-age/png" sizes="32x32" href="./imntf__elm-ages/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/ntf.css">
 </head>
 <body>
 
-  Notifications 3
+  <main class="ntf-wrapper">
+    <section class="ntf">
 
-  Mark all as read
+      <header class="ntf__hdr">
+        <h1 class="ntf__hdr-h">Notifications</h1>
+        <div class="ntf__hdr-counter">3</div>
+        <button class="ntf__hdr-markRead">Mark all as read</button>
+      </header>
 
-  Mark Webber reacted to your recent post My first tournament today!
-  1m ago
+      <article class="ntf__elm ntf-unread">
+        <img class="ntf__elm-uPic" src="./assets/images/avatar-mark-webber.webp" alt="Mark Webber">
+        <div class="ntf__elm-text">
+          <p><a href="" class="ntf__elm-uName">Mark Webber</a> reacted to your recent post <a href="" class="ntf__elm-uPost">My first tournament todaaaaaaaay!</a></p>
+          <p class="ntf__elm-age">1m ago</p>
+        </div>
+      </article>
 
-  Angela Gray followed you
-  5m ago
+      <article class="ntf__elm ntf-unread">
+        <img class="ntf__elm-uPic" src="./assets/images/avatar-angela-gray.webp" alt="Angela Gray">
+        <div class="ntf__elm-text">
+          <p><a href="" class="ntf__elm-uName">Angela Gray</a> followed you</p>
+          <p class="ntf__elm-age">5m ago</p>
+        </div>
+      </article>
 
-  Jacob Thompson has joined your group Chess Club
-  1 day ago
+      <article class="ntf__elm ntf-unread">
+        <img class="ntf__elm-uPic" src="./assets/images/avatar-jacob-thompson.webp" alt="Jacob Thompson">
+        <div class="ntf__elm-text">
+          <p><a href="" class="ntf__elm-uName">Jacob Thompson</a> has joined your group <a href="" class="ntf__elm-uGroup">Chess Club</a></p>
+          <p class="ntf__elm-age">1 day ago</p>
+        </div>
+      </article>
 
-  Rizky Hasanuddin sent you a private message
-  5 days ago
-  Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
-  I'm already having lots of fun and improving my game.
+      <article class="ntf__elm">
+        <img class="ntf__elm-uPic" src="./assets/images/avatar-rizky-hasanuddin.webp" alt="Rizky Hasanuddin">
+        <div class="ntf__elm-text">
+          <p><a href="" class="ntf__elm-uName">Rizky Hasanuddin</a> sent you a private message</p>
+          <p class="ntf__elm-age">5 days ago</p>
+          <a href="" class="ntf__elm-cite">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and
+        I'm already having lots of fun and improving my game.</a>
+        </div>
+      </article>
 
-  Kimberly Smith commented on your picture
-  1 week ago
+      <article class="ntf__elm">
+        <img class="ntf__elm-uPic" src="./assets/images/avatar-kimberly-smith.webp" alt="Kimberly Smith">
+        <div class="ntf__elm-text">
+          <p><a href="" class="ntf__elm-uName">Kimberly Smith</a> commented on your jhgjhgjhgjhgj hg h h h  hh h h h h h h ороро оро о picture</p>
+          <p class="ntf__elm-age">1 week ago</p>
+        </div>
+        <a class="ntf__elm-img-link" class="" href=""><img src="./assets/images/image-chess.webp" alt="Chess"></a>
+      </article>
 
-  Nathan Peterson reacted to your recent post 5 end-game strategies to increase your win rate
-  2 weeks ago
+      <article class="ntf__elm">
+        <img class="ntf__elm-uPic" src="./assets/images/avatar-nathan-peterson.webp" alt="Nathan Peterson">
+        <div class="ntf__elm-text">
+          <p><a href="" class="ntf__elm-uName">Nathan Peterson</a> reacted to your recent post <a href="" class="ntf__elm-uPost">5 end-game strategies to increase your win rate</a></p>
+          <p class="ntf__elm-age">2 weeks ago</p>
+        </div>
+      </article>
 
-  Anna Kim left the group Chess Club
-  2 weeks ago
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <article class="ntf__elm">
+        <img class="ntf__elm-uPic" src="./assets/images/avatar-anna-kim.webp" alt="Anna Kim">
+        <div class="ntf__elm-text">
+          <p><a href="" class="ntf__elm-uName">Anna Kim</a> left the group <a href="" class="ntf__elm-uGroup">Chess Club</a></p>
+          <p class="ntf__elm-age">2 weeks ago</p>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
 </body>
 </html>
