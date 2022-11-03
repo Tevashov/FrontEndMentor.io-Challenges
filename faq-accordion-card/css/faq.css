@@ -1,0 +1,167 @@
+
+/* --- Common rules --- */
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100%; height: 100vh; font-family: 'Kumbh Sans', sans-serif; font-size: 12px; }
+
+:root {
+    /* Text */
+    --veryDkDesatBlue: hsl(238, 29%, 16%);
+    --softRed: hsl(14, 88%, 65%);
+    /* Background gradient */
+    --softViolet: hsl(273, 75%, 66%);
+    --softBlue: hsl(240, 73%, 65%);
+    /* Neutral Text */
+    --veryDkGrayishBlue: hsl(237, 12%, 33%);
+    --dkGrayishBlue: hsl(240, 6%, 50%);
+    /* Neutral Dividers */
+    --ltGrayishBlue: hsl(240, 5%, 91%);
+}
+
+/* --- Component classes --- */
+
+.faq-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient( var(--softViolet), var(--softBlue) );
+}
+
+.faq-box {
+    width: 85%;
+    max-width: 920px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    border-radius: 25px;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, .2);
+}
+
+/* --- Illustration --- */
+
+.faq-illustration {
+    /* : Desktop */
+    border-radius: 25px 0 0 25px;
+    position: relative;
+    background:
+        url('../images/illustration-woman-online-desktop.svg'),
+        url('../images/bg-pattern-desktop.svg'),
+        #fff;
+    background-repeat: no-repeat;
+    background-size:
+        100%,
+        180%;
+    background-position:
+        left -75px top 70px,
+        left -430px top -220px;
+    flex: 1 0 50%;
+}
+
+.faq-illustration_out-desk {
+    /* : Desktop */
+    position: absolute;
+    left: -93px;
+    top: 200px;
+}
+.faq-illustration_out-mobile { display: none; }
+
+/* --- FAQ list --- */
+
+.faq-list {
+    background: #fff;
+    padding: 70px 90px 80px 0;
+    border-radius: 0 25px 25px 0;
+    /* : Desktop */
+    flex: 1 0 50%;
+}
+
+.faq-header {
+    font-size: 30px;
+    margin: 0 0 20px 0;
+    color: var(--veryDkDesatBlue);
+}
+
+.faq-qa {
+    border-bottom: 1px solid var(--ltGrayishBlue);
+    padding: 15px 0;
+    /* : answer animation */
+    max-height: 70px;
+    height: auto;
+    transition: all 1s ease;
+}
+
+.faq-q {
+    font-size: 14px;
+    color: var(--veryDkGrayishBlue);
+    cursor: pointer;
+    /* : Desktop */
+    position: relative;
+    padding-right: 25px;
+}
+.faq-q:hover { color: var(--softRed); }
+
+.faq-q::after {
+    content: url('../images/icon-arrow-down.svg');
+    position: absolute;
+    right: 0;
+    top:0;
+    /* : arrow animation */
+    transition-duration: .2s;
+}
+
+.faq-qa[open] {
+    /* : answer animation */
+    max-height: 99rem;
+    transition: all 1s ease;
+}
+
+.faq-q::marker { content: none; }
+.faq-qa[open] .faq-q { font-weight: bold; }
+.faq-qa[open] .faq-q::after {
+    /* : arrow animation */
+    transform: rotate( 180deg );
+    transition-duration: .2s;
+}
+
+.faq-a {
+    margin-bottom: 0;
+    line-height: 1.5;
+    color: var(--dkGrayishBlue);
+}
+
+/* --- Mobile version ---*/
+
+@media (max-width: 700px) {
+
+    .faq-box { flex-wrap: wrap; }
+
+    .faq-illustration {
+        flex-basis: 100%;
+        height: 120px;
+        border-radius: 25px 25px 0 0;
+        background: url('../images/bg-pattern-mobile.svg') #fff;
+        background-repeat: no-repeat;
+        background-position: center top ;
+    }
+
+    .faq-header { text-align: center; }
+
+    .faq-list {
+        flex-basis: 100%;
+        border-radius: 0 0 25px 25px;
+        padding: 10px 30px 60px 30px
+    }
+
+    .faq-illustration_out-mobile {
+        display: block;
+        position: absolute;
+        top: -115px;
+        left: calc(50% - 120px);
+        width: 240px;
+    }
+    .faq-illustration_out-desk { display: none; }
+
+}
