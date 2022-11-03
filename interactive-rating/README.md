@@ -6,8 +6,8 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 
 ### Links
 
-- Solution URL: [github.com/tevashov/FEM_interactive-rating](https://github.com/tevashov/FEM_interactive-rating)
-- Live Site URL: [tevashov.github.io/FEM_interactive-rating](https://tevashov.github.io/FEM_interactive-rating)
+- Solution URL: [github.com/tevashov/FrontEndMentor.io-Challenges/tree/master/interactive-rating](https://github.com/tevashov/FrontEndMentor.io-Challenges/tree/master/interactive-rating)
+- Live Site URL: [tevashov.github.io/FrontEndMentor.io-Challenges/interactive-rating](https://tevashov.github.io/FrontEndMentor.io-Challenges/interactive-rating/)
 
 ## Author
 

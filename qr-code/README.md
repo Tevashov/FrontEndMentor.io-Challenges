@@ -6,8 +6,8 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Links
 
-- Solution URL: [github.com/tevashov/FEM_qr-code](https://github.com/tevashov/FEM_qr-code)
-- Live Site URL: [tevashov.github.io/FEM_qr-code](https://tevashov.github.io/FEM_qr-code)
+- Solution URL: [github.com/tevashov/FrontEndMentor.io-Challenges/tree/master/qr-code](https://github.com/tevashov/FrontEndMentor.io-Challenges/tree/master/qr-code)
+- Live Site URL: [tevashov.github.io/FrontEndMentor.io-Challenges/qr-code](https://tevashov.github.io/FrontEndMentor.io-Challenges/qr-code/)
 
 ## Author
 
