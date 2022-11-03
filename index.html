@@ -18,7 +18,7 @@
         }
 
         * { box-sizing: border-box; }
-        body { margin: 0; height: 100vh; min-height: 100%; }
+        body { margin: 0; height: 100vh; min-height: 100%; font-family: 'Outfit', sans-serif; }
 
         /* :: Component classes */
 
@@ -33,15 +33,27 @@
         }
 
         .content-box {
-            font-family: 'Outfit', sans-serif;
             background-color: var(--white);
             display: flex;
             flex-direction: column;
             max-width: 640px;
             width: 100%;
-            padding: 20px;
+            padding: 40px;
             border-radius: 20px;
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-box li {
+            padding: 5px 0
+        }
+
+        a {
+            color: rgb(53, 39, 250);
+            text-decoration: none;
+        }
+        a:hover {
+            border-bottom: 1px solid red;
+            color: red;
         }
 
     </style>
@@ -51,14 +63,21 @@
     <main class="wrapper">
         <section class="content-box">
 
-            <h1>Completed frontendmentor.io challenges</h1>
-                <ul>
-                    <li><a href="https://tevashov.github.io/FrontEndMentor.io-Challenges/qr-code/">QR Code Component</a></li>
-                    <li><a href="https://tevashov.github.io/FrontEndMentor.io-Challenges/interactive-rating/">Interactive Rating Component</a></li>
-                    <li><a href="https://tevashov.github.io/FrontEndMentor.io-Challenges/faq-accordion-card/">FAQ Accordion Card</a></li>
-                </ul>
+            <h1>Completed FrontendMentor.io challenges</h1>
+            <ul>
+                <li><a href="https://tevashov.github.io/FrontEndMentor.io-Challenges/qr-code/">QR Code Component</a></li>
+                <li><a href="https://tevashov.github.io/FrontEndMentor.io-Challenges/interactive-rating/">Interactive Rating Component</a></li>
+                <li><a href="https://tevashov.github.io/FrontEndMentor.io-Challenges/faq-accordion-card/">FAQ Accordion Card</a></li>
+            </ul>
 
         </section><!-- END .cRate-box -->
+
+        <p>
+            <a href="https://github.com/tevashov">GitHub</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;
+            <a href="https://www.frontendmentor.io/profile/tevashov" rel="nofollow">FrontendMentor.io</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;
+            <a href="https://twitter.com/teff_101" rel="nofollow">Twitter</a>
+        </p>
+
     </main><!-- END .cRate-wrapper -->
 
 </body>
