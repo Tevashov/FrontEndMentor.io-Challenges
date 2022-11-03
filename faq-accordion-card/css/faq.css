@@ -1,0 +1,98 @@
+/* :: Common rules */
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100%; height: 100vh; font-family: 'Kumbh Sans', sans-serif; font-size: 12px; }
+
+:root {
+    /* Text */
+    --veryDkDesatBlue: hsl(238, 29%, 16%);
+    --softRed: hsl(14, 88%, 65%);
+    /* Background gradient */
+    --softViolet: hsl(273, 75%, 66%);
+    --softBlue: hsl(240, 73%, 65%);
+    /* Neutral Text */
+    --veryDkGrayishBlue: hsl(237, 12%, 33%);
+    --dkGrayishBlue: hsl(240, 6%, 50%);
+    /* Neutral Dividers */
+    --ltGrayishBlue: hsl(240, 5%, 91%);
+}
+
+/* :: Component classes */
+
+.faq-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient( var(--softViolet), var(--softBlue) );
+
+}
+
+.faq-box {
+    width: 85%;
+    max-width: 920px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* :: Illustration */
+
+.faq-illustration {
+    background:
+        url('../images/illustration-woman-online-desktop.svg'),
+        url('../images/bg-pattern-desktop.svg'),
+        #fff;
+    background-repeat: no-repeat;
+    background-size:
+        100%,
+        180%;
+    background-position:
+        left -75px top 50px,
+        left -430px top -220px;
+
+    flex: 1 0 50%;
+    border-radius: 25px 0 0 25px;
+    position: relative;
+}
+
+.faq-illustration_out {
+    position: absolute;
+    left: -93px;
+    top: 180px;
+}
+
+/* :: FAQ list */
+
+.faq-list {
+    background: #fff;
+    padding: 70px 90px 80px 0;
+    flex: 1 0 50%;
+    border-radius: 0 25px 25px 0;
+}
+
+.faq-header {
+    font-size: 30px;
+    margin: 0 0 20px 0;
+    color: var(--veryDkDesatBlue);
+}
+
+.faq-qa {
+    border-bottom: 1px solid var(--ltGrayishBlue);
+    padding: 15px 0;
+}
+
+.faq-qa[open] .faq-q { font-weight: bold; }
+
+.faq-q {
+    font-size: 14px;
+    color: var(--veryDkGrayishBlue);
+}
+
+.faq-a {
+    margin-bottom: 0;
+    line-height: 1.5;
+    color: var(--dkGrayishBlue);
+}
