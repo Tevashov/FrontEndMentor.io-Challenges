@@ -141,22 +141,17 @@ html, body {
 
 /* :: Unread marks */
 
-.ntf-unread .ntf__elm-text {
+.ntf-unread .ntf__elm-text > p:first-of-type {
     position: relative;
-    padding-right: 20px;
-    /* display: inline-block; */
-    /* display: flex; */
-    /* flex: 0 1 100% */
+    display: inline-block;
 }
 
-.ntf-unread .ntf__elm-text::after {
-    content: "#";
-    position: absolute;
-    top: 0;
-    right: 0;
-    /* display: block; */
+.ntf-unread .ntf__elm-text > p:first-of-type:after {
+    /* : &nbsp; + &bulll; */
+    content: "\0000a0\2022";
     color: var(--red);
-    /* padding-left: 15px; */
+    font-size: 24px;
+    line-height: 15px;
 }
 
 
