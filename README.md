@@ -9,3 +9,5 @@
 [Interactive Rating Component](https://tevashov.github.io/FrontEndMentor.io-Challenges/interactive-rating/)
 
 [FAQ Accordion Card](https://tevashov.github.io/FrontEndMentor.io-Challenges/faq-accordion-card/)
+
+[Notifications Page/](https://tevashov.github.io/FrontEndMentor.io-Challenges/notifications-page/)
