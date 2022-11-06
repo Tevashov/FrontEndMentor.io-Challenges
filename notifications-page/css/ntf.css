@@ -9,10 +9,12 @@
     color: var(--dkGrayishBlue);
     font-size: 16px; font-weight: 500;
 }
-html, body {
+html,
+body {
     /* :: set height to cover full page */
     margin: 0; height: 100%;
 }
+html body .is-hidden { display: none; }
 
 :root {
     /* Primary */
@@ -26,7 +28,7 @@ html, body {
     --grayishBlue: hsl(219, 14%, 63%);
     --dkGrayishBlue: hsl(219, 12%, 42%);
     --veryDkBlue: hsl(224, 21%, 14%);
-    /* Custom */
+    /* Added Custom Color */
     --linkActive: hsl(219, 79%, 47%);
 }
 
@@ -49,6 +51,7 @@ html, body {
     width: 85%;
     border-radius: 25px;
     padding: 35px 35px 10px 35px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .05);
     /* :: full page margins */
     margin: 10px 0;
 }
@@ -99,10 +102,11 @@ html, body {
     display: flex;
     margin: 0 0 10px 0;
     padding: 20px;
+    border: 1px solid transparent;
  }
 
  .ntf__elm-uPic {
-    width: 50px;
+    width: 45px;
     height: 100%;
     margin: 0 20px 0 0;
  }
@@ -178,3 +182,38 @@ html, body {
 .ntf__elm-uPost:visited { color: var(--dkGrayishBlue) }
 .ntf__elm-uPost:hover,
 .ntf__elm-uPost:active { color: var(--linkActive) }
+
+
+/* - - - Mobile layout - - - */
+
+@media (max-width: 700px) {
+
+    * { font-size: 14px; }
+
+    .ntf {
+        background: var(--white);
+        max-width: 730px;
+        width: 100%;
+        border-radius: 0;
+        padding: 25px 20px 10px 20px;
+        box-shadow: none;
+        /* :: full page margins */
+        margin: 0;
+    }
+
+    .ntf__hdr { margin: 0 0 25px 0; }
+    .ntf__hdr-h { font-size: 20px; }
+    .ntf__hdr-counter { padding: 3px 10px; }
+    .ntf__hdr-markRead { font-size: 14px; }
+
+    .ntf__elm-uPic {
+        width: 40px;
+        height: 100%;
+        margin: 0 15px 0 0;
+     }
+
+    .ntf-unread .ntf__elm-text > p:first-of-type:after {
+        font-size: 22px;
+        line-height: 12px;
+    }
+}
