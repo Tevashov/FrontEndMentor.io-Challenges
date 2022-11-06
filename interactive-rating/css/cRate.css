@@ -1,9 +1,15 @@
-/* :: Common rules */
+
+/* - - - Common rules - - - */
 
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
 
 * { box-sizing: border-box; }
-body { margin: 0; height: 100vh; min-height: 100%; }
+html,
+body {
+    /* :: set height to cover full page */
+    margin: 0; height: 100%;
+}
+html body .is-hidden { display: none; }
 
 :root {
     --orange: hsl(25, 97%, 53%);
@@ -14,16 +20,17 @@ body { margin: 0; height: 100vh; min-height: 100%; }
     --veryDarkBlue: hsl(216, 12%, 8%);
 }
 
-.is-hidden { display: none; }
 
-/* :: Component classes */
+/* - - - Component classes - - - */
 
 .cRate-wrapper {
-    height: 100%;
+    background: var(--veryDarkBlue);
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--veryDarkBlue);
+    /* :: set height to cover full page */
+    height: auto;
+    min-height: 100%;
 }
 .cRate-wrapper * { font-family: 'Overpass', sans-serif; }
 
@@ -35,6 +42,8 @@ body { margin: 0; height: 100vh; min-height: 100%; }
     border-radius: 25px;
     color: var(--white);
     font-size: 15px;
+    /* :: full page margins */
+    margin: 10px 0;
 }
 
 .cRate-star {
