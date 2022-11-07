@@ -12,4 +12,4 @@
 
 [Notifications Page](https://tevashov.github.io/FrontEndMentor.io-Challenges/notifications-page/)
 
-[News Homeage](https://tevashov.github.io/FrontEndMentor.io-Challenges/news-homepage/)
+[News Homepage](https://tevashov.github.io/FrontEndMentor.io-Challenges/news-homepage/)
