@@ -20,15 +20,13 @@ body {
 
 
 .header {
- display: flex;
+    display: flex;
 }
 
 
 .content {
-    /* max-width: 400px; */
-    /* width: 100%; */
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
 }
 .content__col1 {
 
@@ -41,7 +39,6 @@ body {
 .reviews-wrapper {
     text-align: center;
 }
-
 .reviews {
     display: flex;
 }
@@ -51,26 +48,19 @@ body {
 
 
 .cta-wrapper {
-    /* width: 100%; */
     background-color: orange;
-    /* display: flex; */
-    /* justify-content: center; */
 }
 .cta-wide {
-    /* width: 100%; */
-    /* max-width: 400px; */
+
 }
 
 
 .footer-wrapper {
-    /* width: 100%; */
     background-color: navy;
-    /* display: flex; */
-    /* justify-content: center; */
 }
 .footer {
-    /* width: 100%; */
-    /* max-width: 400px; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 
