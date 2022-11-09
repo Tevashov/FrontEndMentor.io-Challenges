@@ -1,0 +1,45 @@
+header {
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.page-cols {
+    max-width: 400px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.page-cols__one {
+
+}
+.page-cols__two {
+
+}
+
+
+.cta-wrapper {
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+}
+.cta {
+    width: 100%;
+    max-width: 400px;
+}
+
+
+.footer-wrapper {
+    background-color: navy;
+    display: flex;
+    justify-content: center;
+}
+.footer {
+    width: 100%;
+    max-width: 400px;
+}
