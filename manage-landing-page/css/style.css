@@ -1,45 +1,85 @@
-header {
-    width: 100%;
-}
-
-main {
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+}
+.header,
+.content,
+.cta-wide,
+.footer {
+    width: 100%;
+    max-width: 400px;
+}
+.header-wrapper,
+.cta-wrapper,
+.footer-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-.page-cols {
-    max-width: 400px;
-    width: 100%;
+
+.header {
+ display: flex;
+}
+
+
+.content {
+    /* max-width: 400px; */
+    /* width: 100%; */
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.page-cols__one {
+.content__col1 {
 
 }
-.page-cols__two {
+.content__col2 {
+
+}
+
+
+.reviews-wrapper {
+    text-align: center;
+}
+
+.reviews {
+    display: flex;
+}
+.reviews__item {
 
 }
 
 
 .cta-wrapper {
+    /* width: 100%; */
     background-color: orange;
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: center; */
 }
-.cta {
-    width: 100%;
-    max-width: 400px;
+.cta-wide {
+    /* width: 100%; */
+    /* max-width: 400px; */
 }
 
 
 .footer-wrapper {
+    /* width: 100%; */
     background-color: navy;
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: center; */
 }
 .footer {
-    width: 100%;
-    max-width: 400px;
+    /* width: 100%; */
+    /* max-width: 400px; */
+}
+
+
+/* --- Elements --- */
+
+.cta-button {
+    display: inline-block;
+    background-color: red;
+    width: fit-content;
+    padding: 5px 15px;
+    border-radius: 25px;
 }
