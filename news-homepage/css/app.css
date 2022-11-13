@@ -269,8 +269,8 @@ html body .is-hidden { display: none; }
 
     /* toggle sliding menu & background when checkbox is 'checked' */
     .nav-button:checked ~ .nav-bg {
-         visibility: visible;
-         opacity: 1;
+        visibility: visible;
+        opacity: 1;
     }
 
     /* when menu opened make fixed position for checkbox, hamburger and sliding menu */
