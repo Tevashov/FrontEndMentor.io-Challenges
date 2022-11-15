@@ -1,11 +1,10 @@
 (function() {
-
     addEventListener( 'DOMContentLoaded', (event) => {
+
         if ( document.getElementById( 'js-reviews' )) {
 
             let $reviewsBox = document.getElementById( 'js-reviews' ),
-                $reviewsList = $reviewsBox.children,
-                len = $reviewsList.length,
+                len = $reviewsBox.children.length,
                 scrollLTR = true,
                 i = 0,
                 scrollDelta = 0,
@@ -14,27 +13,21 @@
                 maxScroll = scrollWidth - bodyWidth;
 
             function setScroll() {
-
                 if ( scrollLTR ) {
                     i++;
-                    scrollDelta = scrollDelta + maxScroll / len;
-                    if ( scrollDelta > maxScroll ) scrollDelta = maxScroll;
+                    scrollDelta = ( scrollDelta > maxScroll ) ? maxScroll : scrollDelta + maxScroll / len;
                 } else {
                     i--;
-                    scrollDelta = scrollDelta - maxScroll / len;
-                    if ( scrollDelta < 0 ) scrollDelta = 0;
+                    scrollDelta = ( scrollDelta < 0 ) ? 0 : scrollDelta - maxScroll / len
                 }
-
-                $reviewsBox.style.left = '-' + scrollDelta + 'px';
                 if ( i == len || i < 1 ) scrollLTR = !scrollLTR;
-
+                $reviewsBox.style.left = '-' + scrollDelta + 'px';
             }
 
             if ( scrollWidth > bodyWidth ) doScroll = setInterval( setScroll, 5000 );
-
             // TODO on window resize check width and do start or stop
 
-        } // :: END getElementsByClassName('cRate-box')
-    }); // :: END DOMContentLoaded
+        } // :: END getElementById( 'js-reviews' )
 
+    }); // :: END DOMContentLoaded
 })();
