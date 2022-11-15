@@ -56,11 +56,21 @@ h2 {
 /* : markup */
 
 body {
-    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 16px;
+    line-height: 1.5;
     font-weight: 400;
+    /* :: set height to cover full page */
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.page {
     color: var(--darkGrayishBlue);
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,7 +88,6 @@ body {
     justify-content: center;
     padding-left: 25px;
     padding-right: 25px;
-
 }
 
 .header,
@@ -363,7 +372,7 @@ body {
 
 @media (max-width: 720px) {
 
-    body {
+    .page {
         font-size: 14px;
         background:
             url('../images/bg-tablet-pattern.svg') top -130px right -160px no-repeat,
@@ -405,22 +414,22 @@ body {
 
     .header__logo img { width: 110px; }
 
-
-
     .header__links {
-        background: rgba(0, 0, 0, .5);
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        /* align-content: center; */
         align-items: center;
-        height: 100vh;
-        width: 100vw;
-        z-index: 10;
+        padding-top: 100px;
+        /* Overlay */
+        background: rgba(0, 0, 0, .5);
+        height: 120%; /* fight hiding address bar on mobiles while scrolling */
+        width: 100%;
         position: fixed;
+        z-index: 10;
+        left: 0;
         top: 0;
-        right: 0;
-        padding-top: 100px
+        overflow-x: hidden;
+        transition: 0.5s;
     }
 
     .header__links::before,
@@ -442,10 +451,6 @@ body {
         font-weight: 700;
         padding: 12px 0;
     }
-
-
-
-
 
     .header__cta { display: none; }
 
