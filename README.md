@@ -1,4 +1,4 @@
-# Doing Frontend Mentor challenges
+# Frontend Mentor challenges
 
 [Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
 
@@ -15,3 +15,9 @@
 [News Homepage](https://tevashov.github.io/FrontEndMentor.io-Challenges/news-homepage/)
 
 [Manage Landing Page](https://tevashov.github.io/FrontEndMentor.io-Challenges/manage-landing-page/)
+
+## Author
+
+- Website - [Teff](https://github.com/tevashov)
+- Frontend Mentor - [@tevashov](https://www.frontendmentor.io/profile/tevashov)
+- Twitter - [@teff_101](https://twitter.com/teff_101)
