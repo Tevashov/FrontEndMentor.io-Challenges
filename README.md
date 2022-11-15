@@ -13,3 +13,5 @@
 [Notifications Page](https://tevashov.github.io/FrontEndMentor.io-Challenges/notifications-page/)
 
 [News Homepage](https://tevashov.github.io/FrontEndMentor.io-Challenges/news-homepage/)
+
+[Manage Landing Page](https://tevashov.github.io/FrontEndMentor.io-Challenges/manage-landing-page/)
