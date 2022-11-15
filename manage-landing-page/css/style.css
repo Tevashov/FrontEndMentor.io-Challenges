@@ -182,16 +182,15 @@ body {
 .mainmenu__links a:hover,
 .mainmenu__links a:active { color: var(--darkGrayishBlue); }
 
-.mainmenu__toggler,
-.mainmenu__hamburger { display: none; }
-
 .mainmenu__toggler {
-    display: none;
     z-index: 100;
     appearance: none;
     cursor: pointer;
-    opacity: 0;
+    opacity: 0; /* keep invisible, but intact */
 }
+
+.mainmenu__toggler,
+.mainmenu__hamburger { display: none; }
 
 
 /* : content */
@@ -351,7 +350,6 @@ body {
     height: 100%;
 }
 .footer > *:first-child img { width: max-content; }
-.footer > *:last-child { /* text-align: right; */ }
 
 .footer__links { padding-left: 0; }
 .footer__links:first-of-type { padding-left: 30px; }
@@ -424,34 +422,25 @@ body {
 
     .header__cta { display: none; }
 
-
-
-
-
     .mainmenu__toggler,
-    .mainmenu__hamburger {
-        display: block;
-        appearance: none;
-    }
+    .mainmenu__hamburger { display: block; }
 
-    /* toggle sliding menu & background when checkbox is 'checked' */
+    /* . toggle sliding menu & background when checkbox is 'checked' */
     .mainmenu__toggler:checked ~ .mainmenu__overlay {
         visibility: visible;
         opacity: 1;
     }
 
-    /* when menu opened make fixed position for checkbox, hamburger and sliding menu */
+    /* . when menu opened make fixed position for checkbox, hamburger and sliding menu */
     .mainmenu__toggler:checked,
     .mainmenu__toggler:checked + .mainmenu__hamburger {
         position: fixed;
         top: 25px;
         right: 31px;
     }
-
     .mainmenu__toggler:checked ~ .mainmenu__overlay > .mainmenu__links { position: fixed; }
 
-
-    /* checkbox and hamburger button */
+    /* . checkbox and hamburger button */
     .mainmenu__toggler,
     .mainmenu__hamburger {
         width: 35px;
@@ -530,17 +519,16 @@ body {
         display: block;
         margin-top: 100px;
         background: #fff;
-        padding: 20px 0;
+        padding: 30px 0;
     }
 
     .mainmenu__links > * {
         display: block;
         text-align: center;
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 700;
         padding: 12px 0;
     }
-
 
 
     /* : Mobile content */
