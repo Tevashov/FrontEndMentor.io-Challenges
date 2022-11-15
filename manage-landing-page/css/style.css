@@ -157,29 +157,41 @@ body {
     padding: 55px 0;
 }
 
-.header__links {
+.header__logo,
+.header__cta { flex: 0; }
+
+.header__logo img { max-width: fit-content; }
+
+.header__mainmenu {
     display: flex;
     justify-content: center;
     flex-grow: 1;
     padding: 0;
     font-size: 12px;
+    position: relative;
 }
 
-.header__links > * {
+.mainmenu__links > * {
     padding: 0 12px;
     font-weight: 500;
     white-space: nowrap;
 }
 
-.header__links a:link,
-.header__links a:visited { color: var(--darkBlue); }
-.header__links a:hover,
-.header__links a:active { color: var(--darkGrayishBlue); }
+.mainmenu__links a:link,
+.mainmenu__links a:visited { color: var(--darkBlue); }
+.mainmenu__links a:hover,
+.mainmenu__links a:active { color: var(--darkGrayishBlue); }
 
-.header__logo,
-.header__cta { flex: 0; }
+.mainmenu__toggler,
+.mainmenu__hamburger { display: none; }
 
-.header__logo img { max-width: fit-content; }
+.mainmenu__toggler {
+    display: none;
+    z-index: 100;
+    appearance: none;
+    cursor: pointer;
+    opacity: 0;
+}
 
 
 /* : content */
@@ -410,14 +422,99 @@ body {
 
     .header__logo img { width: 110px; }
 
-    .header__links {
+    .header__cta { display: none; }
+
+
+
+
+
+    .mainmenu__toggler,
+    .mainmenu__hamburger {
+        display: block;
+        appearance: none;
+    }
+
+    /* toggle sliding menu & background when checkbox is 'checked' */
+    .mainmenu__toggler:checked ~ .mainmenu__overlay {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    /* when menu opened make fixed position for checkbox, hamburger and sliding menu */
+    .mainmenu__toggler:checked,
+    .mainmenu__toggler:checked + .mainmenu__hamburger {
+        position: fixed;
+        top: 25px;
+        right: 31px;
+    }
+
+    .mainmenu__toggler:checked ~ .mainmenu__overlay > .mainmenu__links { position: fixed; }
+
+
+    /* checkbox and hamburger button */
+    .mainmenu__toggler,
+    .mainmenu__hamburger {
+        width: 35px;
+        height: 50px;
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        top: -30px;
+        right: 15px;
+    }
+    .mainmenu__hamburger {
+        z-index: 99;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
         align-items: center;
-        padding-top: 100px;
-        /* Overlay */
+        justify-content: center;
+    }
+    .mainmenu__hamburger > div {
+        position: relative;
+        height: 4px;
+        background: #000;
+        width: 100%;
+        transition: all 0.4s ease;
+    }
+    .mainmenu__hamburger > div::before,
+    .mainmenu__hamburger > div::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        display: block;
+        height: 4px;
+        background: #000;
+        transition: all 0.4s ease;
+    }
+    .mainmenu__hamburger > div::before { top: 10px; }
+    .mainmenu__hamburger > div::after { top: -10px; }
+
+
+    /* :: Hamburger Animation */
+
+    .mainmenu__toggler:checked + .mainmenu__hamburger > div { background: rgba(0,0,0,0); }
+
+    .mainmenu__toggler:checked + .mainmenu__hamburger > div::before {
+        top: 0;
+        transform: rotate(45deg);
+        background: black;
+    }
+    .mainmenu__toggler:checked + .mainmenu__hamburger > div::after {
+        top: 0;
+        transform: rotate(135deg);
+        background: black;
+    }
+
+
+    /* Overlays */
+
+    .mainmenu__overlay {
+        display: flex;
+        justify-content: center;
         background: rgba(0, 0, 0, .5);
+        visibility: hidden;
+        opacity: 0;
         height: 120%; /* fight hiding address bar on mobiles while scrolling */
         width: 100%;
         position: fixed;
@@ -428,27 +525,22 @@ body {
         transition: 0.5s;
     }
 
-    .header__links::before,
-    .header__links::after {
-        display: block;
-        content: '';
-        height: 30px;
-        background-color: #fff;
+    .mainmenu__links {
         width: 80%;
+        display: block;
+        margin-top: 100px;
+        background: #fff;
+        padding: 20px 0;
     }
 
-    .header__links > * {
-        width: 80%;
-        /* margin: 0 auto; */
+    .mainmenu__links > * {
         display: block;
-        background: #fff;
         text-align: center;
         font-size: 15px;
         font-weight: 700;
         padding: 12px 0;
     }
 
-    .header__cta { display: none; }
 
 
     /* : Mobile content */
