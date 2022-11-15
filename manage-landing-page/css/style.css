@@ -101,7 +101,7 @@ body {
 .input-form__textfield {
     border: none;
     border-radius: 100px;
-    padding: 0 15px;
+    padding: 0 0 0 15px;
     font-size: 12px;
     margin-right: 10px;
     height: 45px;
@@ -129,6 +129,7 @@ body {
     width: fit-content;
     border-radius: 100px;
     height: 45px;
+    white-space: nowrap;
 }
 
 .button {
@@ -165,9 +166,9 @@ body {
 }
 
 .header__links > * {
-    /* list-style: none; */
-    padding: 0 15px;
+    padding: 0 12px;
     font-weight: 500;
+    white-space: nowrap;
 }
 
 .header__links a:link,
@@ -176,12 +177,9 @@ body {
 .header__links a:active { color: var(--darkGrayishBlue); }
 
 .header__logo,
-.header__cta {
-    width: 100%;
-    max-width: 150px;
-}
+.header__cta { flex: 0; }
 
-.header__cta { text-align: right; }
+.header__logo img { max-width: fit-content; }
 
 
 /* : content */
@@ -343,10 +341,8 @@ body {
 .footer > *:first-child img { width: max-content; }
 .footer > *:last-child { /* text-align: right; */ }
 
-.footer__links {
-    padding-left: 0;
-    list-style: none;
-}
+.footer__links { padding-left: 0; }
+.footer__links:first-of-type { padding-left: 30px; }
 
 .footer__links > * {
     display: block;
@@ -370,7 +366,7 @@ body {
 
 /* --- Mobile layout --- */
 
-@media (max-width: 720px) {
+@media (max-width: 740px) {
 
     .page {
         font-size: 14px;
@@ -557,6 +553,7 @@ body {
             "fcol1 fcol1" 1fr
             "fcol5 fcol5" 1fr;
         grid-template-rows: fit-content(200px);
+        justify-content: space-around;
     }
 
     .footer > *:nth-child(1) { grid-area: fcol1; }
@@ -582,11 +579,13 @@ body {
         justify-content: space-around;
     }
 
-    .footer__links {
+    .footer__links,
+    .footer__links:first-of-type {
         padding-top: 60px;
         padding-bottom: 20px;
-        padding-left: 40px;
+        padding-left: 0;
     }
+    .footer__links:first-of-type { padding-left: 20px; }
 
     .footer__copy {
         padding-top: 40px;
