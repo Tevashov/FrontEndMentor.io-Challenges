@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+  <link rel="stylesheet" href="//unpkg.com/a11y-slider@latest/dist/a11y-slider.css" />
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -81,26 +82,34 @@
 
       <article class="reviews__item">
         <div class="reviews__avatar"><img src="./images/avatar-anisha.png" alt="Anisha Li"></div>
-        <strong>Anisha Li</strong>
-        <p>“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”</p>
+        <div class="reviews__content">
+          <strong>Anisha Li</strong>
+          <p>“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”</p>
+        </div>
       </article>
 
       <article class="reviews__item">
         <div class="reviews__avatar"><img src="./images/avatar-ali.png" alt="Ali Bravo"></div>
-        <strong>Ali Bravo</strong>
-        <p>“We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused.”</p>
+        <div class="reviews__content">
+          <strong>Ali Bravo</strong>
+          <p>“We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused.”</p>
+        </div>
       </article>
 
       <article class="reviews__item">
         <div class="reviews__avatar"><img src="./images/avatar-richard.png" alt="Richard Watts"></div>
-        <strong>Richard Watts</strong>
-        <p>“Manage allows us to provide structure and process. It keeps us organized and focused. I can’t stop recommending them to everyone I talk to!”</p>
+        <div class="reviews__content">
+          <strong>Richard Watts</strong>
+          <p>“Manage allows us to provide structure and process. It keeps us organized and focused. I can’t stop recommending them to everyone I talk to!”</p>
+      </div>
       </article>
 
       <article class="reviews__item">
         <div class="reviews__avatar"><img src="./images/avatar-shanai.png" alt="Shanai Gough"></div>
-        <strong>Shanai Gough</strong>
-        <p>“Their software allows us to track, manage and collaborate on our projects from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
+        <div class="reviews__content">
+          <strong>Shanai Gough</strong>
+          <p>“Their software allows us to track, manage and collaborate on our projects from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
+        </div>
       </article>
 
     </div>
@@ -149,9 +158,9 @@
           <!-- display error message if class = "is-input-error" -->
           <div class="input-form flex-col" id="js-input-subscribe">
             <input class="input-form__textfield" type="text" placeholder="Updates in your inbox…">
-            <p class="input-form__message" style="width: 100%">please enter a valid e-mail</p>
+            <p class="input-form__message is-hidden" id="js-message">please enter a valid e-mail</p>
           </div>
-          <button class="input-form__button button">Go</button>
+          <button class="input-form__button button" id="js-submit">Go</button>
         </div>
       </aside>
       <div class="footer__copy"><small>Copyright 2020. All Rights Reserved</small></div>
@@ -162,6 +171,7 @@
 
 </div><!-- END .page -->
 
+<script src="//unpkg.com/a11y-slider@latest/dist/a11y-slider.js"></script>
 <script src="./script/script.js"></script>
 
 </body>
