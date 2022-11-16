@@ -1,2 +1,6 @@
 .vscode
 .vscode/*
+.replit
+replit.nix
+.config
+.config/*
