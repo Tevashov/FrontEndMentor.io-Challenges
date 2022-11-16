@@ -267,7 +267,6 @@ body {
 .reviews {
     display: flex;
     margin: 70px 0 50px 0;
-    min-width: 100%;
     transition: left 1s ease 0s;
 }
 
@@ -275,6 +274,7 @@ body {
     position: relative;
     padding: 0 15px;
     width: 540px;
+    flex: 0 0 auto;
 }
 
 .reviews__item strong {
@@ -736,6 +736,15 @@ body {
         padding-top: 40px;
         position: unset;
         text-align: center;
+    }
+
+}
+
+
+@media (min-width: 1900px) {
+
+    .reviews__item {
+        width: 25%;
     }
 
 }
