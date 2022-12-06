@@ -4,3 +4,5 @@
 replit.nix
 .config
 .config/*
+.idea
+.idea/*

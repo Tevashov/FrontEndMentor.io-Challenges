@@ -1,12 +1,11 @@
 
-document.querySelector('#js-submit').addEventListener('click', function(e) {
-    document.querySelector('#js-message').classList.toggle('is-hidden');
-});
+document.querySelector( '#js-submit' ).addEventListener( 'click', function ( e ) {
+    document.querySelector( '#js-message' ).classList.toggle( 'is-hidden' );
+} );
 
+const sliderEl = document.querySelector( '#js-reviews' );
 
-const sliderEl = document.querySelector('#js-reviews');
-
-const slider = new A11YSlider(sliderEl, {
+const slider = new A11YSlider( sliderEl, {
     autoplay: true,
     arrows: false,
     adaptiveHeight: true,
@@ -29,4 +28,4 @@ const slider = new A11YSlider(sliderEl, {
             slidesToShow: 4,
         }
     }
-});
+} );
