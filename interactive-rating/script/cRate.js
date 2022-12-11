@@ -1,6 +1,6 @@
 ( function () {
     addEventListener( 'DOMContentLoaded', ( event ) => {
-        if ( document.getElementsByClassName( 'cRate-box' ) ) {
+        if ( !!document.getElementsByClassName( 'cRate-box' ) ) {
 
             const $rateBox = document.getElementById( 'js-cRate-form' ),
                 $thanksBox = document.getElementById( 'js-cRate-thanks' ),
